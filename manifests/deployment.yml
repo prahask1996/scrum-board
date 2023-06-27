@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: prahaskscrumboard 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prahaskscrumboard
+  template:
+    metadata:
+      labels:
+        app: prahaskscrumboard 
+    spec:
+      containers:
+        - name: prahaskscrumboard 
+          image: email14.azurecr.io/prahaskscrumboard
+          ports:
+          - containerPort: 8080
